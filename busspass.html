@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body  style="color:aliceblue;background-image: url('images/img.jpg');
-  background-size: cover;
-  background-position: center;">
+  <body style="background-image: url(
+    './images/img.jpg'); background-size: cover;
+            background-position: center;color: aliceblue;">
     
     <br /><br /><br /><br /><br /><br />
 
@@ -17,7 +17,7 @@
         <h1 style="color:aliceblue">Telangana State Board Corporation</h1>
     <h2>General Bus Pass Application</h2></center>
     
-    <form>
+    <form action="./nfdf.html">
        
         
             
@@ -27,17 +27,17 @@
            <center> 
     <table>
         <tr>
-          <td><label>Name</label></td>
-          <td> <input type="text"></td>
+          <td><label for="name" >Name</label></td>
+          <td> <input id="name" pattern="[a-zA-Z]+" autocomplete type="text" required title="only characters are accepted"></td>
           <td><label>Father's/Guardians Name</label></td>
-          <td> <input type="text"></td> 
+          <td> <input pattern="[a-zA-Z]+" type="text"></td> 
         </tr>
           <tr> 
             <td><label>Date of Birth</label></td>
-            <td><input type="text"></td>
-           <td> <label align="left">Gender</label></td>
-           <td> <input type="radio"><label>female</label>
-            <input type="radio"><label>male</label>
+            <td><input type="date"></td>
+           <td> <label align="left" for="Gender">Gender</label></td>
+           <td> <input type="radio" name="Gender"><label>female</label>
+            <input type="radio" name="Gender"><label>male</label>
         </td>
         </tr>
         <tr>
@@ -53,11 +53,12 @@
             <td><label>Whats App No</label></td>
             <td> <input type="text"></td>
             <td><label>Email Id</label></td>
-            <td> <input type="text"></td> 
+            <td> <input type="email" pattern="[a-zA-Z]+@gmail\.com|[a-zA-Z]+@outlook\.com|[a-zA-Z]+@yahoo\.in" required>
+            </td> 
           </tr>
           <tr>
             <td><label>Photo</label></td>
-               <td> <input type="file" ></td>
+               <td> <input type="file" accept=".pdf,.Document" multiple ></td>
           </tr>
         </table>
            </center>
@@ -68,7 +69,7 @@
             <table>
             <tr>
                 <td><label>Applicat's Address</label></td>
-            <td> <textarea rows="7" cols="30"></textarea></td>
+            <td> <textarea   spellcheck="true" rows="7" cols="30"></textarea></td>
             <td>&nbsp;&nbsp;<label for="district">District</label></td>
             
             <td>
@@ -184,14 +185,15 @@
                </tr>
         </table>
     </fieldset>
-    </form>
+    
    <center> <img src="./images/captcha.png" width="300">
    
 </center>
 <center>
-    <input type="text" pattern="">
+    <input type="text" pattern="[V97Wf7]+">
     <br>
     <input type="submit">
 </center>
+</form>
   </body>
 </html>
